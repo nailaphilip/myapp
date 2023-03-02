@@ -1,0 +1,196 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Open+Sans:wght@400;700&family=Raleway&display=swap');
+
+:root {
+    --bg-color: rgb(241, 69, 95);
+    --bg-color-dark: rgb(164, 34, 54);
+    --text-color: white;
+    --font: 'Dancing Script', cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* GLOBAL SETTINGS */
+
+body {
+    background-image: linear-gradient(to right bottom, yellow, red);
+    background-size: 400%;
+    color: var(--text-color);
+    font-family: var(--font);
+    animation: myAnimation3 5s infinite;
+}
+
+@keyframes myAnimation3 {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+header, footer {
+    height: 100px;
+    background-color: var(--bg-color-dark);
+}
+
+main{
+    min-height: calc(100vh - 200px);
+}
+
+h1 {
+    text-shadow: 5px 5px 5px yellow;
+}
+
+button {
+    color: rgb(9, 8, 8);
+    background-image: -webkit-radial-gradient(red, black);
+    border: none;
+    padding: 10px;
+    font-family: var(--font);
+    /* filter: drop-shadow(20px 20px 5px #333);
+    transition: color 1s;
+    transition: background-color 5s; */
+    /* box-shadow: inset 0 0 10px #f8a100; */
+}
+
+/* button:hover {
+    color: rgb(3, 38, 38);
+    padding: 20px;
+    box-shadow: 5px 5px 5px #333;
+    background-image: -webkit-radial-gradient(green, yellow);
+} */
+
+.box {
+    height: 100px;
+    width: 100px;
+    background-color: blueviolet;
+    animation-name: myAnimation2;
+    animation-duration: 10s;
+
+}
+
+@keyframes myAnimation{
+    from {
+        transform: scale(50% 50%);
+        background-color: yellow;
+    }
+
+    to {
+        transform: translate(200px, 200px);
+        background-color: green;
+    }
+}
+
+@keyframes myAnimation2 {
+    0% {transform: translate(0, 0);}
+    25% {transform: translate(200px, 0);
+    background-color: brown;
+border-radius: 50%;}
+    50% {transform: translate(200px, 200px);
+    background-color: black;}
+    75% {transform: translate(0, 200px);
+    background-color: aqua;
+border-radius: 50%;}
+    100% {transform: translate(0, 0);}
+
+
+
+}
+
+
+/* section {
+    background-color: green;
+    transform: skew(40deg, 20deg) scale(200%);
+} */
+.box:hover{
+    /* transform: scale(50%, 75%);
+    transform: skew(40deg, 20deg);
+    transform: translate(50px, 100px);
+    transform: rotate(45deg);
+    transform: perspective(10px) rotate(-45deg); */
+    animation-play-state: paused;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+
+}
+
+img {
+    width: 100%;
+}
+
+img:nth-child(1) {
+    filter: blur(2px);
+}
+
+img:nth-child(1):hover {
+    filter: blur(0);
+}
+
+img:nth-child(2) {
+    filter: brightness(0.6);
+}
+
+img:nth-child(3) {
+    filter: contrast(300%);
+}
+
+img:nth-child(4) {
+    filter: drop-shadow(16px 16px 20px rgb(77, 27, 27));
+}
+
+img:nth-child(5) {
+    filter: grayscale(200%);
+}
+
+img:nth-child(6) {
+    filter: hue-rotate(90deg);
+}
+
+img:nth-child(7) {
+    filter: invert(75%);
+}
+
+img:nth-child(8) {
+    filter: opacity(25%);
+}
+
+img:nth-child(9) {
+    filter: saturate(30%);
+}
+
+img:nth-child(10) {
+    filter: sepia(60%);
+}
+
+
+/* footer{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+} */
+
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #db348a; /* Blue */
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
